@@ -16,8 +16,6 @@ const fetchJobs = async () => {
     <div>
       {
         jobList.map((job:any, index:any) => {
-          console.log({job});
-          
           return <JobCard key={index} job={job} />
         })
       }
