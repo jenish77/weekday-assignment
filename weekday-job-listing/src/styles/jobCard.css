@@ -1,0 +1,14 @@
+.card-container {
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 1px 4px 0px;
+    padding: 20px;
+    max-width: 355px;
+    /* height: 600px; */
+    border-radius: 20px;
+}
+
+.card-container h1 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}

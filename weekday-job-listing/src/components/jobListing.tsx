@@ -1,10 +1,26 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import JobCard from './jobCard'
+import { getJobs } from '../api/jobs'
 
 const jobListing = () => {
+const [jobList, setJobList] = useState([])
+  useEffect(()=>{
+    fetchJobs()
+  },[])
+const fetchJobs = async () => {
+  let jobList = await getJobs();
+  setJobList(jobList.jdList)
+}
+
   return (
     <div>
-      <JobCard/>
+      {
+        jobList.map((job:any, index:any) => {
+          console.log({job});
+          
+          return <JobCard key={index} job={job} />
+        })
+      }
     </div>
   )
 }
