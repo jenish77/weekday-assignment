@@ -1,7 +1,7 @@
 import {} from "react";
-import "./App.css";
 import Filter from "./components/filter";
 import JobListing from "./components/jobListing";
+import './styles/global.css'
 
 function App() {
   return (
