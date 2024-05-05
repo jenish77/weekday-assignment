@@ -1,19 +1,16 @@
-import {} from "react";
-import Filter from "./components/filter";
-import JobListing from "./components/jobListing";
-import './styles/global.css'
 
-function App() {
+import './styles/App.css'
+import './styles/global.css'
+import JobList from './components/newcode/filter';
+
+const App = () => {
   return (
     <>
-      <div>
-        <Filter/>
-      </div>
-      <div className="card">
-        <JobListing/>
-      </div>
+    <div>
+      <JobList/>
+    </div>
     </>
   );
-}
+};
 
 export default App;
