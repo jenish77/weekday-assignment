@@ -1,24 +1,43 @@
-import React from 'react'
+import "../styles/jobCompany.css";
 
-const jobCompany = (props) => {
-  const {logo, companyname, role, location, minexp, maxexp, minsalary, maxsalary} = props;
+const jobCompany = (props: any) => {
+  const {
+    logo,
+    companyname,
+    role,
+    location,
+    minexp,
+    maxexp,
+    minsalary,
+    maxsalary,
+    salaryCurrencyCode,
+  } = props;
   return (
     <div className="card-job">
-      
+      <div className="card-job-days">
+        <h6>⏳ Posted 5 days ago</h6>
+      </div>
       <div className="card-job-company">
-        <div className="card-job-company__logo">{logo && <img src={logo} alt="company logo" />}</div>
+        <div className="card-job-company__logo">
+          {logo && <img src={logo} alt="company logo" />}
+        </div>
         <div className="card-job-company-overview">
-          <h3>{companyname}</h3>
-          <h3>{role}</h3>
-          <div className="card-job-location-exp">
-            <h3>{location}</h3>
-            <h3>{minexp}-{maxexp}</h3>
-          </div>
+          <h3 className="card-job-company-name">{companyname}</h3>
+          <h2 className="card-job-comapny-role">{role}</h2>
+          <p className="card-job-location-exp">
+            {location} {minexp && maxexp ? `| Exp:${minexp}-${maxexp} years` : ""}
+          </p>
         </div>
       </div>
-      <div className="card-job-salary"><h3>Expected Salary:{minsalary}-{maxsalary}</h3></div>
-    </div>
-  );
-}
+      {/* <div className="card-job-salary"> */}
+      <p className="card-job-salary">
+      Estimated Salary: {minsalary && maxsalary ? `${salaryCurrencyCode} ${minsalary}K-${maxsalary}K LPA ✅` : 'NA'}
+      </p>
 
-export default jobCompany
+
+      </div>
+    // </div>
+  );
+};
+
+export default jobCompany;

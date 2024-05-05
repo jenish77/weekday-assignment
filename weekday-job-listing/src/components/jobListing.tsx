@@ -1,26 +1,15 @@
-import React, { useEffect, useState } from 'react'
-import JobCard from './jobCard'
-import { getJobs } from '../api/jobs'
+import JobCard from './jobCard';
 
-const jobListing = () => {
-const [jobList, setJobList] = useState([])
-  useEffect(()=>{
-    fetchJobs()
-  },[])
-const fetchJobs = async () => {
-  let jobList = await getJobs();
-  setJobList(jobList.jdList)
-}
+import '../styles/jobListing.css';
 
+const JobListing = ({ jobList }: { jobList: any[] }) => {
   return (
-    <div>
-      {
-        jobList.map((job:any, index:any) => {
-          return <JobCard key={index} job={job} />
-        })
-      }
+    <div className='job-listing'>
+      {jobList.map((job:any, index:any) => (
+        <JobCard key={index} job={job} />
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default jobListing
+export default JobListing;
