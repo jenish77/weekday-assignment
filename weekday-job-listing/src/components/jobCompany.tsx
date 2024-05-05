@@ -29,7 +29,6 @@ const jobCompany = (props: any) => {
           </p>
         </div>
       </div>
-      {/* <div className="card-job-salary"> */}
       <p className="card-job-salary">
       Estimated Salary: {minsalary && maxsalary ? `${salaryCurrencyCode} ${minsalary}K-${maxsalary}K LPA ✅` : 'NA'}
       </p>
