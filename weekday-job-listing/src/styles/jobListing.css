@@ -1,0 +1,9 @@
+.job-listing {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+  justify-content: space-around;
+  row-gap: 40px;
+}

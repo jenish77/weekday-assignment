@@ -1,0 +1,29 @@
+.card-job-details{
+    height: 250px;
+    overflow: hidden;
+    mask-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255), rgba(255, 255, 255, 0));
+}
+
+.card-job-details h3{
+    padding: 0;
+    margin: 0px;
+    font-family: __LexendFont_7838d2, __LexendFont_Fallback_7838d2;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.card-job-details__view-more {
+
+    position: relative;
+    top: -10px;
+    text-align: center;
+}
+.card-job-details__view-more a{
+    color: #4943da;
+    text-decoration: none;
+}
+
+.card-job-details p{
+    color: rgba(0, 0, 0, 0.87);
+}
